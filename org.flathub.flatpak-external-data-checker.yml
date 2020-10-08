@@ -116,16 +116,16 @@ modules:
         buildsystem: meson
         sources:
           - type: archive
-            url: "https://download.gnome.org/sources/pygobject/3.34/pygobject-3.34.0.tar.xz"
-            sha256: 87e2c9aa785f352ef111dcc5f63df9b85cf6e05e52ff04f803ffbebdacf5271a
+            url: "https://download.gnome.org/sources/pygobject/3.38/pygobject-3.38.0.tar.xz"
+            sha256: 0372d1bb9122fc19f500a249b1f38c2bb67485000f5887497b4b205b3e7084d5
         modules:
 
           - name: pycairo
             buildsystem: meson
             sources:
               - type: archive
-                url: "https://github.com/pygobject/pycairo/releases/download/v1.18.2/pycairo-1.18.2.tar.gz"
-                sha256: dcb853fd020729516e8828ad364084e752327d4cff8505d20b13504b32b16531
+                url: "https://github.com/pygobject/pycairo/releases/download/v1.20.0/pycairo-1.20.0.tar.gz"
+                sha256: 5695a10cb7f9ae0d01f665b56602a845b0a8cb17e2123bfece10c2e58552468c
 
       - python3-ruamel.yaml.json
       - python3-PyGithub.json
