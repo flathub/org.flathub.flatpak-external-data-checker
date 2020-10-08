@@ -1,7 +1,7 @@
 id: org.flathub.flatpak-external-data-checker
 sdk: org.freedesktop.Sdk
-runtime: org.freedesktop.Platform
-runtime-version: "19.08"
+runtime: org.freedesktop.Sdk
+runtime-version: "20.08"
 finish-args:
   - --share=network
   - --filesystem=host:ro
@@ -26,7 +26,7 @@ modules:
     sources:
       - type: git
         url: "https://github.com/flathub/flatpak-external-data-checker.git"
-        commit: 113505e743a4e4ef6c9a6ad22b6c3d6886f2c6e1
+        commit: 05a99d4cb6aaa924b7b03f31389e6eebde19af77
     modules:
 
       - name: python-apt
@@ -36,15 +36,15 @@ modules:
           - python3 setup.py install --prefix=/app --root=/
         sources:
           - type: archive
-            url: "http://deb.debian.org/debian/pool/main/p/python-apt/python-apt_1.8.4.tar.xz"
-            sha256: 7831b3fd0093af5b76393f0d2610cb76c1d44e7aa438837779f9355a9174a220
+            url: "http://deb.debian.org/debian/pool/main/p/python-apt/python-apt_1.8.4.1.tar.xz"
+            sha256: e110b3fff9422c5e27b9cbd23f44e3c7f843d4517fef8b3c2058102b115b20b9
         modules:
 
           - name: apt
             buildsystem: cmake-ninja
             build-options:
               env:
-                PERL5LIB: /app/lib/perl5/vendor_perl/5.30.0
+                PERL5LIB: /app/lib/perl5/vendor_perl/5.32.0
             config-opts:
               - -DWITH_DOC:BOOL=OFF
               - -DUSE_NLS:BOOL=OFF
@@ -53,22 +53,12 @@ modules:
               - -DCMAKE_INSTALL_SYSCONFDIR:PATH=/etc
             sources:
               - type: archive
-                url: "http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.4.tar.xz"
-                sha256: f40fe4475f3ab775a915569911326ff31c12c09eb8518bd82ba87aa570d6c43e
+                url: "http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.1.tar.xz"
+                sha256: 6d447f2e9437ec24e78350b63bb0592bee1f050811d51990b0c783183b0983f8
               - type: shell
                 commands:
                   - sed '/add_subdirectory(doc)/d' -i CMakeLists.txt
             modules:
-
-              - name: lz4
-                no-autogen: true
-                make-install-args:
-                  - PREFIX=/app
-                  - LIBDIR=/app/lib
-                sources:
-                  - type: archive
-                    url: "https://github.com/lz4/lz4/archive/v1.9.2.tar.gz"
-                    sha256: 658ba6191fa44c92280d4aa2c271b0f4fbc0e34d249578dd05e50e76d0e5efcc
 
               - name: googletest
                 buildsystem: cmake-ninja
@@ -126,16 +116,16 @@ modules:
         buildsystem: meson
         sources:
           - type: archive
-            url: "https://download.gnome.org/sources/pygobject/3.34/pygobject-3.34.0.tar.xz"
-            sha256: 87e2c9aa785f352ef111dcc5f63df9b85cf6e05e52ff04f803ffbebdacf5271a
+            url: "https://download.gnome.org/sources/pygobject/3.38/pygobject-3.38.0.tar.xz"
+            sha256: 0372d1bb9122fc19f500a249b1f38c2bb67485000f5887497b4b205b3e7084d5
         modules:
 
           - name: pycairo
             buildsystem: meson
             sources:
               - type: archive
-                url: "https://github.com/pygobject/pycairo/releases/download/v1.18.2/pycairo-1.18.2.tar.gz"
-                sha256: dcb853fd020729516e8828ad364084e752327d4cff8505d20b13504b32b16531
+                url: "https://github.com/pygobject/pycairo/releases/download/v1.20.0/pycairo-1.20.0.tar.gz"
+                sha256: 5695a10cb7f9ae0d01f665b56602a845b0a8cb17e2123bfece10c2e58552468c
 
       - python3-ruamel.yaml.json
       - python3-PyGithub.json
