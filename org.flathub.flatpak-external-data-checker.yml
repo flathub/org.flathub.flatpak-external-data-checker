@@ -1,7 +1,7 @@
 id: org.flathub.flatpak-external-data-checker
 sdk: org.freedesktop.Sdk
-runtime: org.freedesktop.Platform
-runtime-version: "19.08"
+runtime: org.freedesktop.Sdk
+runtime-version: "20.08"
 finish-args:
   - --share=network
   - --filesystem=host:ro
@@ -44,7 +44,7 @@ modules:
             buildsystem: cmake-ninja
             build-options:
               env:
-                PERL5LIB: /app/lib/perl5/vendor_perl/5.30.0
+                PERL5LIB: /app/lib/perl5/vendor_perl/5.32.0
             config-opts:
               - -DWITH_DOC:BOOL=OFF
               - -DUSE_NLS:BOOL=OFF
@@ -59,16 +59,6 @@ modules:
                 commands:
                   - sed '/add_subdirectory(doc)/d' -i CMakeLists.txt
             modules:
-
-              - name: lz4
-                no-autogen: true
-                make-install-args:
-                  - PREFIX=/app
-                  - LIBDIR=/app/lib
-                sources:
-                  - type: archive
-                    url: "https://github.com/lz4/lz4/archive/v1.9.2.tar.gz"
-                    sha256: 658ba6191fa44c92280d4aa2c271b0f4fbc0e34d249578dd05e50e76d0e5efcc
 
               - name: googletest
                 buildsystem: cmake-ninja
