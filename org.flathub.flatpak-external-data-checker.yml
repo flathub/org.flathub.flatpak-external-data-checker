@@ -1,14 +1,14 @@
 id: org.flathub.flatpak-external-data-checker
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Sdk
-runtime-version: "20.08"
+runtime-version: '20.08'
 finish-args:
   - --share=network
   - --filesystem=host:ro
 command: flatpak-external-data-checker
 cleanup:
-  - "*.a"
-  - "*.la"
+  - '*.a'
+  - '*.la'
   - /include
   - /lib/pkgconfig
   - /share/man
@@ -25,9 +25,9 @@ modules:
       - install -Dm644 data/${FLATPAK_ID}.metainfo.xml -t /app/share/metainfo/
     sources:
       - type: git
-        url: "https://github.com/flathub/flatpak-external-data-checker.git"
+        url: https://github.com/flathub/flatpak-external-data-checker.git
         branch: master
-        commit: 05a99d4cb6aaa924b7b03f31389e6eebde19af77
+        commit: 30d88e198c931b0ef8cf864fc3905a100d9b83cc
     modules:
 
       - name: python-apt
@@ -37,8 +37,8 @@ modules:
           - python3 setup.py install --prefix=/app --root=/
         sources:
           - type: archive
-            url: "http://deb.debian.org/debian/pool/main/p/python-apt/python-apt_1.8.4.1.tar.xz"
-            sha256: e110b3fff9422c5e27b9cbd23f44e3c7f843d4517fef8b3c2058102b115b20b9
+            url: http://deb.debian.org/debian/pool/main/p/python-apt/python-apt_2.1.7.tar.xz
+            sha256: f5ede02141d0a1978ca96cf4a75d7096327318ef96cf2e13012fadde8d690915
             x-checker-data:
               type: debian-repo
               root: http://deb.debian.org/debian
@@ -61,8 +61,8 @@ modules:
               - -DCMAKE_INSTALL_SYSCONFDIR:PATH=/etc
             sources:
               - type: archive
-                url: "http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.1.tar.xz"
-                sha256: 6d447f2e9437ec24e78350b63bb0592bee1f050811d51990b0c783183b0983f8
+                url: http://deb.debian.org/debian/pool/main/a/apt/apt_2.1.20.tar.xz
+                sha256: 9078a6111c224d2924cbac68f1318de7458ca8225ffbdebfabaca2c7237012dc
                 x-checker-data:
                   type: debian-repo
                   root: http://deb.debian.org/debian
@@ -80,10 +80,10 @@ modules:
                 builddir: true
                 sources:
                   - type: archive
-                    url: "https://github.com/google/googletest/archive/release-1.8.1.tar.gz"
+                    url: https://github.com/google/googletest/archive/release-1.8.1.tar.gz
                     sha256: 9bf1fe5182a604b4135edc1a425ae356c9ad15e9b23f9f12a02e80184c3a249c
                 cleanup:
-                  - "*"
+                  - '*'
 
               - name: libdb
                 config-opts:
@@ -95,7 +95,7 @@ modules:
                 subdir: build_unix
                 sources:
                   - type: archive
-                    url: "http://download.oracle.com/berkeley-db/db-5.3.28.tar.gz"
+                    url: http://download.oracle.com/berkeley-db/db-5.3.28.tar.gz
                     sha256: e0a992d740709892e81f9d93f06daf305cf73fb81b545afe72478043172c3628
                   - type: patch
                     paths:
@@ -124,8 +124,8 @@ modules:
                   - --localstatedir=/var
                 sources:
                   - type: archive
-                    url: "http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.19.7.tar.xz"
-                    sha256: 4c27fededf620c0aa522fff1a48577ba08144445341257502e7730f2b1a296e8
+                    url: http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.20.7.1.tar.xz
+                    sha256: 0aad2de687f797ef8ebdabc7bafd16dc1497f1ce23bd9146f9aa73f396a5636f
                     x-checker-data:
                       type: debian-repo
                       root: http://deb.debian.org/debian
@@ -156,7 +156,7 @@ modules:
         buildsystem: meson
         sources:
           - type: archive
-            url: "https://download.gnome.org/sources/pygobject/3.38/pygobject-3.38.0.tar.xz"
+            url: https://download.gnome.org/sources/pygobject/3.38/pygobject-3.38.0.tar.xz
             sha256: 0372d1bb9122fc19f500a249b1f38c2bb67485000f5887497b4b205b3e7084d5
             x-checker-data:
               type: json
@@ -171,7 +171,7 @@ modules:
             buildsystem: meson
             sources:
               - type: archive
-                url: "https://github.com/pygobject/pycairo/releases/download/v1.20.0/pycairo-1.20.0.tar.gz"
+                url: https://github.com/pygobject/pycairo/releases/download/v1.20.0/pycairo-1.20.0.tar.gz
                 sha256: 5695a10cb7f9ae0d01f665b56602a845b0a8cb17e2123bfece10c2e58552468c
                 x-checker-data:
                   type: json
@@ -184,7 +184,7 @@ modules:
       - name: squashfs-tools
         no-autogen: true
         make-args:
-          - XZ_SUPPORT=1 
+          - XZ_SUPPORT=1
           - LZMA_XZ_SUPPORT=1
           - LZ4_SUPPORT=1
         make-install-args:
