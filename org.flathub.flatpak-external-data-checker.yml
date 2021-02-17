@@ -26,6 +26,7 @@ modules:
     sources:
       - type: git
         url: "https://github.com/flathub/flatpak-external-data-checker.git"
+        branch: master
         commit: 05a99d4cb6aaa924b7b03f31389e6eebde19af77
     modules:
 
@@ -38,6 +39,13 @@ modules:
           - type: archive
             url: "http://deb.debian.org/debian/pool/main/p/python-apt/python-apt_1.8.4.1.tar.xz"
             sha256: e110b3fff9422c5e27b9cbd23f44e3c7f843d4517fef8b3c2058102b115b20b9
+            x-checker-data:
+              type: debian-repo
+              root: http://deb.debian.org/debian
+              dist: bullseye
+              component: main
+              package-name: python-apt
+              source: true
         modules:
 
           - name: apt
@@ -55,6 +63,13 @@ modules:
               - type: archive
                 url: "http://deb.debian.org/debian/pool/main/a/apt/apt_1.8.2.1.tar.xz"
                 sha256: 6d447f2e9437ec24e78350b63bb0592bee1f050811d51990b0c783183b0983f8
+                x-checker-data:
+                  type: debian-repo
+                  root: http://deb.debian.org/debian
+                  dist: bullseye
+                  component: main
+                  package-name: apt
+                  source: true
               - type: shell
                 commands:
                   - sed '/add_subdirectory(doc)/d' -i CMakeLists.txt
@@ -111,6 +126,13 @@ modules:
                   - type: archive
                     url: "http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.19.7.tar.xz"
                     sha256: 4c27fededf620c0aa522fff1a48577ba08144445341257502e7730f2b1a296e8
+                    x-checker-data:
+                      type: debian-repo
+                      root: http://deb.debian.org/debian
+                      dist: bullseye
+                      component: main
+                      package-name: dpkg
+                      source: true
 
       - name: pygobject
         buildsystem: meson
@@ -118,6 +140,13 @@ modules:
           - type: archive
             url: "https://download.gnome.org/sources/pygobject/3.38/pygobject-3.38.0.tar.xz"
             sha256: 0372d1bb9122fc19f500a249b1f38c2bb67485000f5887497b4b205b3e7084d5
+            x-checker-data:
+              type: json
+              url: https://download.gnome.org/sources/pygobject/cache.json
+              version-query: |
+                .[2]["pygobject"] | map(select(. | match("([0-9].[0-9]*[02468].[0-9]+)|([0-9]+\\\\.[0-9]+)"; "g"))) | last
+              url-query: |
+                "https://download.gnome.org/sources/pygobject/" + .[1]["pygobject"][$version]["tar.xz"]
         modules:
 
           - name: pycairo
@@ -126,6 +155,13 @@ modules:
               - type: archive
                 url: "https://github.com/pygobject/pycairo/releases/download/v1.20.0/pycairo-1.20.0.tar.gz"
                 sha256: 5695a10cb7f9ae0d01f665b56602a845b0a8cb17e2123bfece10c2e58552468c
+                x-checker-data:
+                  type: json
+                  url: https://api.github.com/repos/pygobject/pycairo/releases/latest
+                  version-query: |
+                    .tag_name | sub("^v"; "")
+                  url-query: |
+                    .assets | map(select(.name=="pycairo-\($version).tar.gz")) | first | .browser_download_url
 
       - python3-ruamel.yaml.json
       - python3-PyGithub.json
