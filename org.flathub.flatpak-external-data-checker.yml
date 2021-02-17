@@ -181,7 +181,23 @@ modules:
                   url-query: |
                     .assets | map(select(.name=="pycairo-\($version).tar.gz")) | first | .browser_download_url
 
+      - name: squashfs-tools
+        no-autogen: true
+        make-args:
+          - XZ_SUPPORT=1 
+          - LZMA_XZ_SUPPORT=1
+          - LZ4_SUPPORT=1
+        make-install-args:
+          - INSTALL_DIR=$(FLATPAK_DEST)/bin
+        subdir: squashfs-tools
+        sources:
+          - type: archive
+            url: https://github.com/plougher/squashfs-tools/archive/4.4-git.1.tar.gz
+            sha256: 9b89c3d2f0d0456e99fa3dd4429d45044044f0115acb0f15c441a4b9496d25a7
+
       - python3-ruamel.yaml.json
       - python3-PyGithub.json
       - python3-tenacity.json
       - python3-defusedxml.json
+      - python3-pyelftools.json
+      - python3-toml.json
