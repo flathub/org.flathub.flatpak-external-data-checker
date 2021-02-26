@@ -159,12 +159,9 @@ modules:
             url: https://download.gnome.org/sources/pygobject/3.38/pygobject-3.38.0.tar.xz
             sha256: 0372d1bb9122fc19f500a249b1f38c2bb67485000f5887497b4b205b3e7084d5
             x-checker-data:
-              type: json
-              url: https://download.gnome.org/sources/pygobject/cache.json
-              version-query: |
-                .[2]["pygobject"] | map(select(. | match("([0-9].[0-9]*[02468].[0-9]+)|([0-9]+\\\\.[0-9]+)"; "g"))) | last
-              url-query: |
-                "https://download.gnome.org/sources/pygobject/" + .[1]["pygobject"][$version]["tar.xz"]
+              type: gnome
+              name: pygobject
+              stable-only: true
         modules:
 
           - name: pycairo
