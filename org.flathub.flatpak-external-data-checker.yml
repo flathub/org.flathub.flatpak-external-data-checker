@@ -61,8 +61,8 @@ modules:
               - -DCMAKE_INSTALL_SYSCONFDIR:PATH=/etc
             sources:
               - type: archive
-                url: http://deb.debian.org/debian/pool/main/a/apt/apt_2.1.20.tar.xz
-                sha256: 9078a6111c224d2924cbac68f1318de7458ca8225ffbdebfabaca2c7237012dc
+                url: http://deb.debian.org/debian/pool/main/a/apt/apt_2.2.0.tar.xz
+                sha256: b25c9e6cb89e2e3c812584b38dfba333ff8be75e8e907a27a0394914abc36ca9
                 x-checker-data:
                   type: debian-repo
                   root: http://deb.debian.org/debian
