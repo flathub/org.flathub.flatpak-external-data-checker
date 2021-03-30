@@ -156,8 +156,8 @@ modules:
         buildsystem: meson
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/pygobject/3.40/pygobject-3.40.0.tar.xz
-            sha256: 67d61fac9f5aa83bf2edccbc286802ce0f1c3dde8f83103b7c765b91a6ed905f
+            url: https://download.gnome.org/sources/pygobject/3.40/pygobject-3.40.1.tar.xz
+            sha256: 00c6d591f4cb40c335ab1fd3e8c17869ba15cfda54416fe363290af766790035
             x-checker-data:
               type: gnome
               name: pygobject
