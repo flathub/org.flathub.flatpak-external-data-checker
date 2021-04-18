@@ -194,7 +194,6 @@ modules:
 
       - python3-ruamel.yaml.json
       - python3-PyGithub.json
-      - python3-tenacity.json
       - python3-defusedxml.json
       - python3-pyelftools.json
       - python3-toml.json
