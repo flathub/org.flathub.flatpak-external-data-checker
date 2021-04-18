@@ -197,3 +197,4 @@ modules:
       - python3-defusedxml.json
       - python3-pyelftools.json
       - python3-toml.json
+      - python3-aiohttp.json
