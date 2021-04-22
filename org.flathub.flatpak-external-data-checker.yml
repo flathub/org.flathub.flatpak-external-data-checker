@@ -61,8 +61,8 @@ modules:
               - -DCMAKE_INSTALL_SYSCONFDIR:PATH=/etc
             sources:
               - type: archive
-                url: http://deb.debian.org/debian/pool/main/a/apt/apt_2.2.2.tar.xz
-                sha256: c5449a4c2126a12497a9949cd10209926005d329f6ce7942a3781fa2fcf50487
+                url: http://deb.debian.org/debian/pool/main/a/apt/apt_2.2.3.tar.xz
+                sha256: 2880474bc08c79f103cd30d24a9c30c78b480c65076e466d24df93b9fa05ab27
                 x-checker-data:
                   type: debian-repo
                   root: http://deb.debian.org/debian
@@ -124,8 +124,8 @@ modules:
                   - --localstatedir=/var
                 sources:
                   - type: archive
-                    url: http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.20.7.1.tar.xz
-                    sha256: 0aad2de687f797ef8ebdabc7bafd16dc1497f1ce23bd9146f9aa73f396a5636f
+                    url: http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.20.9.tar.xz
+                    sha256: 5ce242830f213b5620f08e6c4183adb1ef4dc9da28d31988a27c87c71fe534ce
                     x-checker-data:
                       type: debian-repo
                       root: http://deb.debian.org/debian
