@@ -1,0 +1,14 @@
+{
+    "name": "python3-semver",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"semver\" --no-build-isolation"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/31/a9/b61190916030ee9af83de342e101f192bbb436c59be20a4cb0cdb7256ece/semver-2.13.0.tar.gz",
+            "sha256": "fa0fe2722ee1c3f57eac478820c3a5ae2f624af8264cbdf9000c980ff7f75e3f"
+        }
+    ]
+}
