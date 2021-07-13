@@ -2,7 +2,7 @@
     "name": "python3-jsonschema",
     "buildsystem": "simple",
     "build-commands": [
-        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"jsonschema\" --no-build-isolation"
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} --use-deprecated=legacy-resolver \"jsonschema\" --no-build-isolation"
     ],
     "sources": [
         {
