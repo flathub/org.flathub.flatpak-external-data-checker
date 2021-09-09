@@ -13,6 +13,9 @@ cleanup:
   - /lib/pkgconfig
   - /share/man
   - /share/doc
+build-options:
+  env:
+    PERL5LIB: /app/lib/perl5/vendor_perl/5.34.0
 modules:
 
   - name: flatpak-external-data-checker
@@ -50,9 +53,6 @@ modules:
 
           - name: apt
             buildsystem: cmake-ninja
-            build-options:
-              env:
-                PERL5LIB: /app/lib/perl5/vendor_perl/5.32.0
             config-opts:
               - -DWITH_DOC:BOOL=OFF
               - -DUSE_NLS:BOOL=OFF
