@@ -35,7 +35,7 @@ modules:
 
       - name: python-apt
         buildsystem: simple
-        build-commands:
+        build-commands: &py3-build-commands
           - python3 setup.py build
           - python3 setup.py install --prefix=/app --root=/
         sources:
@@ -191,6 +191,57 @@ modules:
           - type: archive
             url: https://github.com/plougher/squashfs-tools/archive/4.4-git.1.tar.gz
             sha256: 9b89c3d2f0d0456e99fa3dd4429d45044044f0115acb0f15c441a4b9496d25a7
+
+      - name: python3-PyNaCl
+        build-options:
+          env:
+            SODIUM_INSTALL: system
+        buildsystem: simple
+        build-commands: *py3-build-commands
+        sources:
+          - type: archive
+            url: https://files.pythonhosted.org/packages/cf/5a/25aeb636baeceab15c8e57e66b8aa930c011ec1c035f284170cacb05025e/PyNaCl-1.4.0.tar.gz
+            sha256: 54e9a2c849c742006516ad56a88f5c74bf2ce92c9f67435187c3c5953b346505
+            x-checker-data:
+              type: pypi
+              name: PyNaCl
+          # Get rid of bundled libsodium
+          - type: shell
+            commands:
+              - rm -rf src/libsodium/
+        modules:
+
+          - name: libsodium
+            sources:
+              - type: archive
+                url: https://download.libsodium.org/libsodium/releases/libsodium-1.0.18.tar.gz
+                sha256: 6f504490b342a4f8a4c4a02fc9b866cbef8622d5df4e5452b46be121e46636c1
+                x-checker-data:
+                  type: html
+                  url: https://download.libsodium.org/libsodium/releases/
+                  pattern: (libsodium-([\d\.]+).tar.gz)
+
+          - name: python3-cffi
+            buildsystem: simple
+            build-commands: *py3-build-commands
+            sources:
+              - type: archive
+                url: https://files.pythonhosted.org/packages/2e/92/87bb61538d7e60da8a7ec247dc048f7671afe17016cd0008b3b710012804/cffi-1.14.6.tar.gz
+                sha256: c9a875ce9d7fe32887784274dd533c57909b7b1dcadcc128a2ac21331a9765dd
+                x-checker-data:
+                  type: pypi
+                  name: cffi
+
+          - name: python3-pycparser
+            buildsystem: simple
+            build-commands: *py3-build-commands
+            sources:
+              - type: archive
+                url: https://files.pythonhosted.org/packages/0f/86/e19659527668d70be91d0369aeaa055b4eb396b0f387a4f92293a20035bd/pycparser-2.20.tar.gz
+                sha256: 2d475327684562c3a96cc71adf7dc8c4f0565175cf86b6d7a404ff4c771f15f0
+                x-checker-data:
+                  type: pypi
+                  name: pycparser
 
       - python3-ruamel.yaml.json
       - python3-PyGithub.json
