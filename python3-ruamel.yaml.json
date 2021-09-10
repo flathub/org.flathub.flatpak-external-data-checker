@@ -2,18 +2,18 @@
     "name": "python3-ruamel.yaml",
     "buildsystem": "simple",
     "build-commands": [
-        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} ruamel.yaml"
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ruamel.yaml\" --no-build-isolation"
     ],
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/92/28/612085de3fae9f82d62d80255d9f4cf05b1b341db1e180adcf28c1bf748d/ruamel.yaml.clib-0.2.0.tar.gz",
-            "sha256": "b66832ea8077d9b3f6e311c4a53d06273db5dc2db6e8a908550f3c14d67e718c"
+            "url": "https://files.pythonhosted.org/packages/8b/25/08e5ad2431a028d0723ca5540b3af6a32f58f25e83c6dda4d0fcef7288a3/ruamel.yaml.clib-0.2.6.tar.gz",
+            "sha256": "4ff604ce439abb20794f05613c374759ce10e3595d1867764dd1ae675b85acbd"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/fa/90/ecff85a2e9c497e2fa7142496e10233556b5137db5bd46f3f3b006935ca8/ruamel.yaml-0.16.5-py2.py3-none-any.whl",
-            "sha256": "0db639b1b2742dae666c6fc009b8d1931ef15c9276ef31c0673cc6dcf766cf40"
+            "url": "https://files.pythonhosted.org/packages/71/81/f597606e81f53eb69330e3f8287e9b5a3f7ed0481824036d550da705cd82/ruamel.yaml-0.17.16.tar.gz",
+            "sha256": "1a771fc92d3823682b7f0893ad56cb5a5c87c48e62b5399d6f42c8759a583b33"
         }
     ]
 }
