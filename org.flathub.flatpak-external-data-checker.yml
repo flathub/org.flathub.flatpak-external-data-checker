@@ -214,12 +214,16 @@ modules:
           - name: libsodium
             sources:
               - type: archive
-                url: https://download.libsodium.org/libsodium/releases/libsodium-1.0.18.tar.gz
+                url: https://github.com/jedisct1/libsodium/releases/download/1.0.18-RELEASE/libsodium-1.0.18.tar.gz
                 sha256: 6f504490b342a4f8a4c4a02fc9b866cbef8622d5df4e5452b46be121e46636c1
                 x-checker-data:
-                  type: html
-                  url: https://download.libsodium.org/libsodium/releases/
-                  pattern: (libsodium-([\d\.]+).tar.gz)
+                  type: json
+                  url: https://api.github.com/repos/jedisct1/libsodium/releases/latest
+                  tag-query: .tag_name
+                  version-query: $tag | sub("-RELEASE$"; "")
+                  url-query: >-
+                    .assets | map(select(.name=="libsodium-\($version).tar.gz")) |
+                    first | .browser_download_url
 
           - name: python3-cffi
             buildsystem: simple
