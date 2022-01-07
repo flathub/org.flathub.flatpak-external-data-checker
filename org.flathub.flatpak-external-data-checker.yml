@@ -196,6 +196,7 @@ modules:
         build-options:
           env:
             SODIUM_INSTALL: system
+            SETUPTOOLS_USE_DISTUTILS: stdlib
         buildsystem: simple
         build-commands: *py3-build-commands
         sources:
