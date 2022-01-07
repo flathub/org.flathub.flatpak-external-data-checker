@@ -1,0 +1,14 @@
+{
+    "name": "python3-editorconfig",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"editorconfig\" --no-build-isolation"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/4e/04/e8a79c1db0c55ef03d53c05c61d06c4d6d3be37ef84e5400ce36b4a0fbe9/EditorConfig-0.12.3-py3-none-any.whl",
+            "sha256": "6b0851425aa875b08b16789ee0eeadbd4ab59666e9ebe728e526314c4a2e52c1"
+        }
+    ]
+}
