@@ -30,7 +30,7 @@ modules:
       - type: git
         url: https://github.com/flathub/flatpak-external-data-checker.git
         branch: master
-        commit: 2f7f27d73d097a5fcf4ed144a3918e3b71e2c608
+        commit: 764a2fa3212a9dd4f8335d5c48728ccfb7c63a45
     modules:
 
       - name: python-apt
