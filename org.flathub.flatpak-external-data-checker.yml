@@ -270,3 +270,4 @@ modules:
       - python3-semver.json
       - python3-jsonschema.json
       - python3-editorconfig.json
+      - python3-packaging.json
