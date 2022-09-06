@@ -1,7 +1,7 @@
 id: org.flathub.flatpak-external-data-checker
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Sdk
-runtime-version: '21.08'
+runtime-version: '22.08'
 finish-args:
   - --share=network
   - --filesystem=host:ro
