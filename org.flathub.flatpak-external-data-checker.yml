@@ -1,7 +1,7 @@
 id: org.flathub.flatpak-external-data-checker
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Sdk
-runtime-version: '21.08'
+runtime-version: '22.08'
 finish-args:
   - --share=network
   - --filesystem=host:ro
@@ -15,7 +15,7 @@ cleanup:
   - /share/doc
 build-options:
   env:
-    PERL5LIB: /app/lib/perl5/vendor_perl/5.34.1
+    PERL5LIB: /app/lib/perl5/vendor_perl/5.36.0
 modules:
 
   - name: flatpak-external-data-checker
