@@ -40,12 +40,12 @@ modules:
           - python3 setup.py install --prefix=/app --root=/
         sources:
           - type: archive
-            url: http://deb.debian.org/debian/pool/main/p/python-apt/python-apt_2.2.1.tar.xz
-            sha256: b9336cc92dc0a3bcc7be05b40f6752d10220cc968b19061f6c7fc12bf22a97f2
+            url: http://deb.debian.org/debian/pool/main/p/python-apt/python-apt_2.3.0+nmu1.tar.xz
+            sha256: a0f5bedd2a9608a6b6b99c36674bece8dc1e8647b894cdbe84af0f39e137ebc0
             x-checker-data:
               type: debian-repo
               root: http://deb.debian.org/debian
-              dist: bullseye
+              dist: bookworm
               component: main
               package-name: python-apt
               source: true
@@ -61,12 +61,12 @@ modules:
               - -DCMAKE_INSTALL_SYSCONFDIR:PATH=/etc
             sources:
               - type: archive
-                url: http://deb.debian.org/debian/pool/main/a/apt/apt_2.2.4.tar.xz
-                sha256: 6eecd04a4979bd2040b22a14571c15d342c4e1802b2023acb5aa19649b1f64ea
+                url: http://deb.debian.org/debian/pool/main/a/apt/apt_2.5.4.tar.xz
+                sha256: 7c50f63fa8f8b28cde7b45055df168937d382f28b0045d5133829b70636ef872
                 x-checker-data:
                   type: debian-repo
                   root: http://deb.debian.org/debian
-                  dist: bullseye
+                  dist: bookworm
                   component: main
                   package-name: apt
                   source: true
@@ -124,12 +124,12 @@ modules:
                   - --localstatedir=/var
                 sources:
                   - type: archive
-                    url: http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.20.12.tar.xz
-                    sha256: 1428610305d00dffa9c35543fc3096bb1ce3293b53ed4ddad847a3d822eafbf0
+                    url: http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.21.9.tar.xz
+                    sha256: a0aba375625459260cbc89933a12b3188a713c840e3aaefc14bf2d9adee19642
                     x-checker-data:
                       type: debian-repo
                       root: http://deb.debian.org/debian
-                      dist: bullseye
+                      dist: bookworm
                       component: main
                       package-name: dpkg
                       source: true
