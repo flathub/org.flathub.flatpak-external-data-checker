@@ -124,8 +124,8 @@ modules:
                   - --localstatedir=/var
                 sources:
                   - type: archive
-                    url: http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.21.17.tar.xz
-                    sha256: 6bb214f378a72d9de999598e60b9e387ab03c0899288f5414da1332ef225686f
+                    url: http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.21.18.tar.xz
+                    sha256: 7fcbbf28ecf622bad84229114dab4f62e0b0c29f6263b00dd1f3f73fe40e1062
                     x-checker-data:
                       type: debian-repo
                       root: http://deb.debian.org/debian
