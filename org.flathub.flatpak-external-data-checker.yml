@@ -40,8 +40,8 @@ modules:
           - python3 setup.py install --prefix=/app --root=/
         sources:
           - type: archive
-            url: http://deb.debian.org/debian/pool/main/p/python-apt/python-apt_2.5.2.tar.xz
-            sha256: b852011da60c261bd2aedc8b8e7b8a1259e6aa974245d4b8d02b0f7adb5c33f2
+            url: http://deb.debian.org/debian/pool/main/p/python-apt/python-apt_2.5.3.tar.xz
+            sha256: 75c209876c5650bb5787cd7f30190e4ce6c79fc32ecf0e45f93dbdd78a99a130
             x-checker-data:
               type: debian-repo
               root: http://deb.debian.org/debian
