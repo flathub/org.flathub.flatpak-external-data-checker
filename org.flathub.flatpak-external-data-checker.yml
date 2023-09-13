@@ -162,8 +162,8 @@ modules:
         buildsystem: meson
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/pygobject/3.44/pygobject-3.44.1.tar.xz
-            sha256: 3c6805d1321be90cc32e648215a562430e0d3d6edcda8f4c5e7a9daffcad5710
+            url: https://download.gnome.org/sources/pygobject/3.46/pygobject-3.46.0.tar.xz
+            sha256: 426008b2dad548c9af1c7b03b59df0440fde5c33f38fb5406b103a43d653cafc
             x-checker-data:
               type: gnome
               name: pygobject
@@ -220,8 +220,8 @@ modules:
           - name: libsodium
             sources:
               - type: archive
-                url: https://github.com/jedisct1/libsodium/releases/download/1.0.18-RELEASE/libsodium-1.0.18.tar.gz
-                sha256: 6f504490b342a4f8a4c4a02fc9b866cbef8622d5df4e5452b46be121e46636c1
+                url: https://github.com/jedisct1/libsodium/releases/download/1.0.19-RELEASE/libsodium-1.0.19.tar.gz
+                sha256: b8abea95ea00a22d63b1634c5f2c9c1316715b9cac6ea63168d5e962b89a197b
                 x-checker-data:
                   type: json
                   url: https://api.github.com/repos/jedisct1/libsodium/releases/latest
