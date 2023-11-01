@@ -2,6 +2,8 @@ id: org.flathub.flatpak-external-data-checker
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Sdk
 runtime-version: '23.08'
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
 finish-args:
   - --share=network
   - --filesystem=host:ro
@@ -268,6 +270,7 @@ modules:
               name: lxml
 
       - python3-ruamel.yaml.json
+      - python3-cryptography.json
       - python3-PyGithub.json
       - python3-defusedxml.json
       - python3-pyelftools.json
