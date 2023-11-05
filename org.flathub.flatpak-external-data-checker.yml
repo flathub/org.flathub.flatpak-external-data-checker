@@ -6,7 +6,7 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
 finish-args:
   - --share=network
-  - --filesystem=host:ro
+  - --filesystem=home
 command: flatpak-external-data-checker
 cleanup:
   - '*.a'
