@@ -32,7 +32,7 @@ modules:
       - type: git
         url: https://github.com/flathub-infra/flatpak-external-data-checker.git
         branch: master
-        commit: 3ec5bc00fc22caf21147d0fd66ccb38e6d28102a
+        commit: b9b5770e480624e9d7adbab1176d89d94cd1d573
     modules:
 
       - name: python-apt
@@ -263,8 +263,8 @@ modules:
         build-commands: *py3-build-commands
         sources:
           - type: archive
-            url: https://files.pythonhosted.org/packages/30/39/7305428d1c4f28282a4f5bdbef24e0f905d351f34cf351ceb131f5cddf78/lxml-4.9.3.tar.gz
-            sha256: 48628bd53a426c9eb9bc066a923acaa0878d1e86129fd5359aee99285f4eed9c
+            url: https://files.pythonhosted.org/packages/84/14/c2070b5e37c650198de8328467dd3d1681e80986f81ba0fea04fc4ec9883/lxml-4.9.4.tar.gz
+            sha256: b1541e50b78e15fa06a2670157a1962ef06591d4c998b998047fff5e3236880e
             x-checker-data:
               type: pypi
               name: lxml
