@@ -17,7 +17,7 @@ cleanup:
   - /share/doc
 build-options:
   env:
-    PERL5LIB: /app/lib/perl5/vendor_perl/5.38.0
+    PERL5LIB: /app/lib/perl5/vendor_perl/5.38.2
 modules:
 
   - name: flatpak-external-data-checker
