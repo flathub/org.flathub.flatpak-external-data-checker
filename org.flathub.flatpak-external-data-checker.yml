@@ -30,7 +30,7 @@ modules:
       - install -Dm644 data/${FLATPAK_ID}.metainfo.xml -t /app/share/metainfo/
     sources:
       - type: git
-        url: https://github.com/flathub/flatpak-external-data-checker.git
+        url: https://github.com/flathub-infra/flatpak-external-data-checker.git
         branch: master
         commit: 3ec5bc00fc22caf21147d0fd66ccb38e6d28102a
     modules:
