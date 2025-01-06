@@ -58,6 +58,7 @@ modules:
             config-opts:
               - -DWITH_DOC:BOOL=OFF
               - -DUSE_NLS:BOOL=OFF
+              - -DWITH_TESTS=OFF
               - -DROOT_GROUP=root
               - -DCMAKE_INSTALL_LOCALSTATEDIR:PATH=/var
               - -DCMAKE_INSTALL_SYSCONFDIR:PATH=/etc
@@ -76,16 +77,6 @@ modules:
                 commands:
                   - sed '/add_subdirectory(doc)/d' -i CMakeLists.txt
             modules:
-
-              - name: googletest
-                buildsystem: cmake-ninja
-                builddir: true
-                sources:
-                  - type: archive
-                    url: https://github.com/google/googletest/archive/release-1.8.1.tar.gz
-                    sha256: 9bf1fe5182a604b4135edc1a425ae356c9ad15e9b23f9f12a02e80184c3a249c
-                cleanup:
-                  - '*'
 
               - name: libdb
                 config-opts:
