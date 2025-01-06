@@ -19,6 +19,15 @@ build-options:
   env:
     PERL5LIB: /app/lib/perl5/vendor_perl/5.40.0
 modules:
+  - name: python3-setuptools
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "setuptools" --no-build-isolation --ignore-installed
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/4e/6e/abdfaaf5c294c553e7a81cf5d801fbb4f53f5c5b6646de651f92a2667547/setuptools-75.7.0-py3-none-any.whl
+        sha256: 84fb203f278ebcf5cd08f97d3fb96d3fbed4b629d500b29ad60d11e00769b183
 
   - name: flatpak-external-data-checker
     buildsystem: simple
