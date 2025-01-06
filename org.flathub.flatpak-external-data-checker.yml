@@ -1,7 +1,7 @@
 id: org.flathub.flatpak-external-data-checker
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Sdk
-runtime-version: '23.08'
+runtime-version: '24.08'
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
 finish-args:
@@ -17,7 +17,7 @@ cleanup:
   - /share/doc
 build-options:
   env:
-    PERL5LIB: /app/lib/perl5/vendor_perl/5.38.2
+    PERL5LIB: /app/lib/perl5/vendor_perl/5.40.0
 modules:
 
   - name: flatpak-external-data-checker
