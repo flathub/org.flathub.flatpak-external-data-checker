@@ -17,7 +17,7 @@ cleanup:
   - /share/doc
 build-options:
   env:
-    PERL5LIB: /app/lib/perl5/vendor_perl/5.40.1
+    PERL5LIB: /app/lib/perl5
 modules:
   - name: python3-setuptools
     buildsystem: simple
@@ -122,6 +122,8 @@ modules:
               - name: dpkg
                 build-options:
                   ldflags: -ltinfo
+                  env:
+                    PERL_LIBDIR: /app/lib/perl5
                 config-opts:
                   - --sbindir=/app/bin
                   - --localstatedir=/var
