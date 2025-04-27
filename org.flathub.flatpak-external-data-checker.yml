@@ -17,7 +17,7 @@ cleanup:
   - /share/doc
 build-options:
   env:
-    PERL5LIB: /app/lib/perl5/vendor_perl/5.40.1
+    PERL5LIB: /app/lib/perl5/vendor_perl/5.40.2
 modules:
   - name: python3-setuptools
     buildsystem: simple
