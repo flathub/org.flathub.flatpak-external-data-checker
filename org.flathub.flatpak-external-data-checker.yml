@@ -41,7 +41,7 @@ modules:
       - type: git
         url: https://github.com/flathub-infra/flatpak-external-data-checker.git
         branch: master
-        commit: 1a8c8d8532a09947a5c11c7eb11c637bd7a2572f
+        commit: 9600414d861a1fc9cfa282ce7f0db57dceb1b4c7
     modules:
 
       - name: python-apt
@@ -165,8 +165,8 @@ modules:
         buildsystem: meson
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/pygobject/3.52/pygobject-3.52.3.tar.gz
-            sha256: 00e427d291e957462a8fad659a9f9c8be776ff82a8b76bdf402f1eaeec086d82
+            url: https://download.gnome.org/sources/pygobject/3.53/pygobject-3.53.0.tar.gz
+            sha256: 9952c8a5f48ed5c7e87de906443dbbb99b2da03c649f451dfdea2f8bbd88c9b2
             x-checker-data:
               type: gnome
               name: pygobject
@@ -264,8 +264,8 @@ modules:
         build-commands: *py3-build-commands
         sources:
           - type: archive
-            url: https://files.pythonhosted.org/packages/c5/ed/60eb6fa2923602fba988d9ca7c5cdbd7cf25faa795162ed538b527a35411/lxml-6.0.0.tar.gz
-            sha256: 032e65120339d44cdc3efc326c9f660f5f7205f3a535c1fdbf898b29ea01fb72
+            url: https://files.pythonhosted.org/packages/8f/bd/f9d01fd4132d81c6f43ab01983caea69ec9614b913c290a26738431a015d/lxml-6.0.1.tar.gz
+            sha256: 2b3a882ebf27dd026df3801a87cf49ff791336e0f94b0fad195db77e01240690
             x-checker-data:
               type: pypi
               name: lxml
