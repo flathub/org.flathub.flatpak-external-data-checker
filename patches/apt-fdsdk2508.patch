@@ -1,0 +1,12 @@
+diff --git a/apt-pkg/contrib/strutl.cc b/apt-pkg/contrib/strutl.cc
+index 67100f1..c0a1cbc 100644
+--- a/apt-pkg/contrib/strutl.cc
++++ b/apt-pkg/contrib/strutl.cc
+@@ -26,6 +26,7 @@
+ 
+ #include <algorithm>
+ #include <array>
++#include <cstdint>
+ #include <iomanip>
+ #include <limits>
+ #include <locale>
