@@ -41,7 +41,7 @@ modules:
       - type: git
         url: https://github.com/flathub-infra/flatpak-external-data-checker.git
         branch: master
-        commit: 9600414d861a1fc9cfa282ce7f0db57dceb1b4c7
+        commit: f7f982bd184a42c33d233d63214770d7479baf4f
     modules:
 
       - name: python-apt
@@ -169,8 +169,8 @@ modules:
         buildsystem: meson
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/pygobject/3.54/pygobject-3.54.0.tar.gz
-            sha256: 4652a7cc7ff950a5099d56ac61a78c144629c20f8855a1306933b46b10f3b417
+            url: https://download.gnome.org/sources/pygobject/3.54/pygobject-3.54.3.tar.gz
+            sha256: a8da09134a0f7d56491cf2412145e35aa74e91d760e8f337096a1cda0b92bae7
             x-checker-data:
               type: gnome
               name: pygobject
@@ -201,8 +201,8 @@ modules:
         build-commands: *py3-build-commands
         sources:
           - type: archive
-            url: https://files.pythonhosted.org/packages/a7/22/27582568be639dfe22ddb3902225f91f2f17ceff88ce80e4db396c8986da/PyNaCl-1.5.0.tar.gz
-            sha256: 8ac7448f09ab85811607bdd21ec2464495ac8b7c66d146bf545b0f08fb9220ba
+            url: https://files.pythonhosted.org/packages/06/c6/a3124dee667a423f2c637cfd262a54d67d8ccf3e160f3c50f622a85b7723/pynacl-1.6.0.tar.gz
+            sha256: cb36deafe6e2bce3b286e5d1f3e1c246e0ccdb8808ddb4550bb2792f2df298f2
             x-checker-data:
               type: pypi
               name: PyNaCl
@@ -233,9 +233,6 @@ modules:
               - type: archive
                 url: https://files.pythonhosted.org/packages/fc/97/c783634659c2920c3fc70419e3af40972dbaf758daa229a7d6ea6135c90d/cffi-1.17.1.tar.gz
                 sha256: 1c39c6016c32bc48dd54561950ebd6836e1670f2ae46128f67cf49e789c52824
-                x-checker-data:
-                  type: pypi
-                  name: cffi
 
           - name: python3-pycparser
             buildsystem: simple
@@ -244,9 +241,6 @@ modules:
               - type: archive
                 url: https://files.pythonhosted.org/packages/1d/b2/31537cf4b1ca988837256c910a668b553fceb8f069bedc4b1c826024b52c/pycparser-2.22.tar.gz
                 sha256: 491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6
-                x-checker-data:
-                  type: pypi
-                  name: pycparser
 
       - name: python3-lxml
         build-options:
@@ -256,8 +250,8 @@ modules:
         build-commands: *py3-build-commands
         sources:
           - type: archive
-            url: https://files.pythonhosted.org/packages/8f/bd/f9d01fd4132d81c6f43ab01983caea69ec9614b913c290a26738431a015d/lxml-6.0.1.tar.gz
-            sha256: 2b3a882ebf27dd026df3801a87cf49ff791336e0f94b0fad195db77e01240690
+            url: https://files.pythonhosted.org/packages/aa/88/262177de60548e5a2bfc46ad28232c9e9cbde697bd94132aeb80364675cb/lxml-6.0.2.tar.gz
+            sha256: cd79f3367bd74b317dda655dc8fcfa304d9eb6e4fb06b7168c5cf27f96e0cd62
             x-checker-data:
               type: pypi
               name: lxml
