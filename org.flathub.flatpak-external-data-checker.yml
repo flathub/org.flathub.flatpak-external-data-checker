@@ -201,8 +201,8 @@ modules:
         build-commands: *py3-build-commands
         sources:
           - type: archive
-            url: https://files.pythonhosted.org/packages/06/c6/a3124dee667a423f2c637cfd262a54d67d8ccf3e160f3c50f622a85b7723/pynacl-1.6.0.tar.gz
-            sha256: cb36deafe6e2bce3b286e5d1f3e1c246e0ccdb8808ddb4550bb2792f2df298f2
+            url: https://files.pythonhosted.org/packages/b2/46/aeca065d227e2265125aea590c9c47fbf5786128c9400ee0eb7c88931f06/pynacl-1.6.1.tar.gz
+            sha256: 8d361dac0309f2b6ad33b349a56cd163c98430d409fa503b10b70b3ad66eaa1d
             x-checker-data:
               type: pypi
               name: PyNaCl
