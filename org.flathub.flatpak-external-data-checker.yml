@@ -41,7 +41,7 @@ modules:
       - type: git
         url: https://github.com/flathub-infra/flatpak-external-data-checker.git
         branch: master
-        commit: fd0d94ff9b8082395dabda734491279e1070f770
+        commit: 00bfa7b6ad333fcb60a553835f2738eec60d2f16
     modules:
 
       - name: python-apt
@@ -169,8 +169,8 @@ modules:
         buildsystem: meson
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/pygobject/3.55/pygobject-3.55.1.tar.gz
-            sha256: 1558d013f7d4c4f9dc47a7245b1dc6a8e91ea1d43ce67959aef4f7331a586eff
+            url: https://download.gnome.org/sources/pygobject/3.55/pygobject-3.55.2.tar.gz
+            sha256: 6261a65b2e5e447fe280d7874f9d5c63e509248ec734b4c9ed5a5d762cac543c
             x-checker-data:
               type: gnome
               name: pygobject
