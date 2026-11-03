@@ -26,7 +26,8 @@ modules:
         --prefix=${FLATPAK_DEST} "setuptools" --no-build-isolation --ignore-installed
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/4e/6e/abdfaaf5c294c553e7a81cf5d801fbb4f53f5c5b6646de651f92a2667547/setuptools-75.7.0-py3-none-any.whl
+        url: 
+          https://files.pythonhosted.org/packages/4e/6e/abdfaaf5c294c553e7a81cf5d801fbb4f53f5c5b6646de651f92a2667547/setuptools-75.7.0-py3-none-any.whl
         sha256: 84fb203f278ebcf5cd08f97d3fb96d3fbed4b629d500b29ad60d11e00769b183
 
   - name: flatpak-external-data-checker
@@ -41,7 +42,7 @@ modules:
       - type: git
         url: https://github.com/flathub-infra/flatpak-external-data-checker.git
         branch: master
-        commit: eb885e1bcb15644066573888127a381a54466155
+        commit: 99c09feedea0db088bb2b5f19d3d98b6b282e538
     modules:
 
       - name: python-apt
@@ -145,8 +146,8 @@ modules:
                   - name: libmd
                     sources:
                       - type: archive
-                        url: https://libbsd.freedesktop.org/releases/libmd-1.2.0.tar.xz
-                        sha256: ac15ffb8430502fbaccdec66c5a82ee0eab0b0f36220df56710feadfeb13d0a0
+                        url: https://libbsd.freedesktop.org/releases/libmd-1.3.0.tar.xz
+                        sha256: fc0f1eb6b6766470326f2c014693809190e67dba84274a6fbae9d4912d066706
                         x-checker-data:
                           type: anitya
                           project-id: 15525
@@ -166,8 +167,8 @@ modules:
         buildsystem: meson
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/pygobject/3.57/pygobject-3.57.0.tar.gz
-            sha256: db66b5a7a30b90acec6b96e246ec3985c8e7619bde181160a296d800d563bf5c
+            url: https://download.gnome.org/sources/pygobject/3.58/pygobject-3.58.1.tar.gz
+            sha256: 4c80598ade17fbaa7798e01a25d0bf29ce109740786026a074c5c62bb3e79d23
             x-checker-data:
               type: gnome
               name: pygobject
@@ -178,8 +179,9 @@ modules:
             buildsystem: meson
             sources:
               - type: archive
-                url: https://github.com/pygobject/pycairo/releases/download/v1.29.0/pycairo-1.29.0.tar.gz
-                sha256: f3f7fde97325cae80224c09f12564ef58d0d0f655da0e3b040f5807bd5bd3142
+                url: 
+                  https://github.com/pygobject/pycairo/releases/download/v1.29.2/pycairo-1.29.2.tar.gz
+                sha256: 3e69fff74fe64f5ba2dfa31f67c6bdf26413342574047437d2ac520d35e9a489
                 x-checker-data:
                   type: json
                   url: https://api.github.com/repos/pygobject/pycairo/releases/latest
@@ -198,7 +200,8 @@ modules:
         build-commands: *py3-build-commands
         sources:
           - type: archive
-            url: https://files.pythonhosted.org/packages/d9/9a/4019b524b03a13438637b11538c82781a5eda427394380381af8f04f467a/pynacl-1.6.2.tar.gz
+            url: 
+              https://files.pythonhosted.org/packages/d9/9a/4019b524b03a13438637b11538c82781a5eda427394380381af8f04f467a/pynacl-1.6.2.tar.gz
             sha256: 018494d6d696ae03c7e656e5e74cdfd8ea1326962cc401bcf018f1ed8436811c
             x-checker-data:
               type: pypi
@@ -212,7 +215,8 @@ modules:
           - name: libsodium
             sources:
               - type: archive
-                url: https://github.com/jedisct1/libsodium/releases/download/1.0.22-RELEASE/libsodium-1.0.22.tar.gz
+                url: 
+                  https://github.com/jedisct1/libsodium/releases/download/1.0.22-RELEASE/libsodium-1.0.22.tar.gz
                 sha256: adbdd8f16149e81ac6078a03aca6fc03b592b89ef7b5ed83841c086191be3349
                 x-checker-data:
                   type: json
@@ -228,7 +232,8 @@ modules:
             build-commands: *py3-build-commands
             sources:
               - type: archive
-                url: https://files.pythonhosted.org/packages/fc/97/c783634659c2920c3fc70419e3af40972dbaf758daa229a7d6ea6135c90d/cffi-1.17.1.tar.gz
+                url: 
+                  https://files.pythonhosted.org/packages/fc/97/c783634659c2920c3fc70419e3af40972dbaf758daa229a7d6ea6135c90d/cffi-1.17.1.tar.gz
                 sha256: 1c39c6016c32bc48dd54561950ebd6836e1670f2ae46128f67cf49e789c52824
 
           - name: python3-pycparser
@@ -236,7 +241,8 @@ modules:
             build-commands: *py3-build-commands
             sources:
               - type: archive
-                url: https://files.pythonhosted.org/packages/1d/b2/31537cf4b1ca988837256c910a668b553fceb8f069bedc4b1c826024b52c/pycparser-2.22.tar.gz
+                url: 
+                  https://files.pythonhosted.org/packages/1d/b2/31537cf4b1ca988837256c910a668b553fceb8f069bedc4b1c826024b52c/pycparser-2.22.tar.gz
                 sha256: 491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6
 
       - name: python3-lxml
@@ -247,8 +253,9 @@ modules:
         build-commands: *py3-build-commands
         sources:
           - type: archive
-            url: https://files.pythonhosted.org/packages/05/3b/aab6728cae887456f409b4d75e8a01856e4f04bd510de38052a47768b680/lxml-6.1.1.tar.gz
-            sha256: ba96ae44888e0185281e937633a743ea90d5a196c6000f82565ebb0580012d40
+            url: 
+              https://files.pythonhosted.org/packages/23/ad/28ecd7cb894d172f3c9c80a075eeeb2017ac62e3632cee05a5f9493547eb/lxml-6.1.3.tar.gz
+            sha256: 45222d94ddd511536f3b2f7d9deae3b2339b4ce0f075f1ca25703b07cad9dd21
             x-checker-data:
               type: pypi
               name: lxml
