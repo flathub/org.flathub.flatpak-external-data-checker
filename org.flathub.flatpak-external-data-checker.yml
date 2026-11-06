@@ -41,7 +41,7 @@ modules:
       - type: git
         url: https://github.com/flathub-infra/flatpak-external-data-checker.git
         branch: master
-        commit: eb885e1bcb15644066573888127a381a54466155
+        commit: 42de85108559034a3b1603b7cf3a9fbadff9e429
     modules:
 
       - name: python-apt
@@ -145,8 +145,8 @@ modules:
                   - name: libmd
                     sources:
                       - type: archive
-                        url: https://libbsd.freedesktop.org/releases/libmd-1.2.0.tar.xz
-                        sha256: ac15ffb8430502fbaccdec66c5a82ee0eab0b0f36220df56710feadfeb13d0a0
+                        url: https://libbsd.freedesktop.org/releases/libmd-1.3.0.tar.xz
+                        sha256: fc0f1eb6b6766470326f2c014693809190e67dba84274a6fbae9d4912d066706
                         x-checker-data:
                           type: anitya
                           project-id: 15525
@@ -166,8 +166,8 @@ modules:
         buildsystem: meson
         sources:
           - type: archive
-            url: https://download.gnome.org/sources/pygobject/3.57/pygobject-3.57.0.tar.gz
-            sha256: db66b5a7a30b90acec6b96e246ec3985c8e7619bde181160a296d800d563bf5c
+            url: https://download.gnome.org/sources/pygobject/3.58/pygobject-3.58.1.tar.gz
+            sha256: 4c80598ade17fbaa7798e01a25d0bf29ce109740786026a074c5c62bb3e79d23
             x-checker-data:
               type: gnome
               name: pygobject
@@ -178,8 +178,8 @@ modules:
             buildsystem: meson
             sources:
               - type: archive
-                url: https://github.com/pygobject/pycairo/releases/download/v1.29.0/pycairo-1.29.0.tar.gz
-                sha256: f3f7fde97325cae80224c09f12564ef58d0d0f655da0e3b040f5807bd5bd3142
+                url: https://github.com/pygobject/pycairo/releases/download/v1.29.2/pycairo-1.29.2.tar.gz
+                sha256: 3e69fff74fe64f5ba2dfa31f67c6bdf26413342574047437d2ac520d35e9a489
                 x-checker-data:
                   type: json
                   url: https://api.github.com/repos/pygobject/pycairo/releases/latest
@@ -247,8 +247,8 @@ modules:
         build-commands: *py3-build-commands
         sources:
           - type: archive
-            url: https://files.pythonhosted.org/packages/05/3b/aab6728cae887456f409b4d75e8a01856e4f04bd510de38052a47768b680/lxml-6.1.1.tar.gz
-            sha256: ba96ae44888e0185281e937633a743ea90d5a196c6000f82565ebb0580012d40
+            url: https://files.pythonhosted.org/packages/23/ad/28ecd7cb894d172f3c9c80a075eeeb2017ac62e3632cee05a5f9493547eb/lxml-6.1.3.tar.gz
+            sha256: 45222d94ddd511536f3b2f7d9deae3b2339b4ce0f075f1ca25703b07cad9dd21
             x-checker-data:
               type: pypi
               name: lxml
