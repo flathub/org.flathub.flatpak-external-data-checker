@@ -1,7 +1,7 @@
 id: org.flathub.flatpak-external-data-checker
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Sdk
-runtime-version: '25.08'
+runtime-version: '26.08'
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
 finish-args:
