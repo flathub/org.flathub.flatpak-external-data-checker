@@ -12,8 +12,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/cb/30/2d76730ade03303d1c4deb0742a4fbe374e072a4eeb9e1d08f5140f7ddd2/ruamel.yaml-0.17.20-py3-none-any.whl",
-            "sha256": "810eef9c46523a3f77479c66267a4708255ebe806a2d540078408c2227f011af"
+            "url": "https://files.pythonhosted.org/packages/b8/0c/51f6841f1d84f404f92463fc2b1ba0da357ca1e3db6b7fbda26956c3b82a/ruamel_yaml-0.19.1-py3-none-any.whl",
+            "sha256": "27592957fedf6e0b62f281e96effd28043345e0e66001f97683aa9a40c667c93"
         }
     ]
 }

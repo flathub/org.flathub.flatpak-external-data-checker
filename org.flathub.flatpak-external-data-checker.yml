@@ -40,7 +40,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/flathub-infra/flatpak-external-data-checker.git
-        branch: master
         commit: fc8c4cc8c56937754559bcd0be6e3b766a087495
     modules:
 
