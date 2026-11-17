@@ -1,7 +1,9 @@
 id: org.flathub.flatpak-external-data-checker
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Sdk
-runtime-version: '25.08'
+runtime-version: '26.08'
+base: org.flatpak.Builder.BaseApp
+base-version: '26.08'
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
 finish-args:
@@ -188,6 +190,47 @@ modules:
                     .assets | map(select(.name=="pycairo-\($version).tar.gz")) | first | .browser_download_url
 
       - shared-modules/squashfs-tools/squashfs-tools.json
+
+      - name: appstream
+        buildsystem: meson
+        config-opts:
+          - -Ddocs=false
+          - -Dapidocs=false
+          - -Dgir=false
+          - -Dcompose=false
+          - -Dtests=false
+          - -Dinstalled_tests=false
+          - -Dbash-completion=false
+        sources:
+          - type: git
+            url: https://github.com/flathub-infra/appstream.git
+            commit: 4c1a4d66cfa0a48a1329c2eedac743a260e3a012
+
+      - name: flatpak
+        buildsystem: meson
+        config-opts:
+          - -Dgir=enabled
+          - -Ddocbook_docs=disabled
+          - -Dgtkdoc=disabled
+          - -Dman=disabled
+          - -Dtests=false
+          - -Dmalcontent=disabled
+          - -Dseccomp=disabled
+          - -Dsandboxed_triggers=false
+          - -Dsystem_helper=disabled
+          - -Dselinux_module=disabled
+          - -Dwayland_security_context=disabled
+          - -Dsystem_bubblewrap=bwrap
+          - -Dsystem_dbus_proxy=xdg-dbus-proxy
+        cleanup:
+          - /etc/profile.d
+          - /lib/systemd
+          - /share/dbus-1
+          - /share/gdm
+        sources:
+          - type: archive
+            url: https://github.com/flatpak/flatpak/releases/download/1.18.4/flatpak-1.18.4.tar.xz
+            sha256: b899a7a00c48d2c626cb8ec33fe556720b376c25805d7222430c0fdca4c6ac8d
 
       - name: python3-PyNaCl
         build-options:
